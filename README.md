@@ -1,3 +1,3 @@
 # cookbooksrepo
 
-This repo is for rean assignments
+This repo is for rean assignments.
