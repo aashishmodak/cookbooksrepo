@@ -2,11 +2,11 @@
 
 docker-install Cookbook
 =======================
-Installs Hashicorp vault from package OR source code to CentOS 7      
+Installs docker from package to CentOS 7      
 
 Requirements
 ------------
-Installs Hashicorp vault on CentOS 7      
+Installs docker on CentOS 7      
 
 Attributes
 ----------
