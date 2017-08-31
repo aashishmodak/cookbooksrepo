@@ -5,6 +5,7 @@ Installs MongoDB on Ubuntu 14.04
 
 REQUIREMENTS:
 Install MongoDB
+
 Platform
 Ubuntu 14.04
 
@@ -16,20 +17,11 @@ kitchen version: 1.17.0
 inspec version: 1.33.1
 	
 
-Cookbook Recipes
-importkey.rb
-createfile.rb
-update.rb
-install.rb
-MongoDBstatus.rb
-
-Cookbook Default recipe includes below recipes.
-include_recipe "MongoDB::importkey"
-include_recipe "MongoDB::createfile"
-include_recipe "MongoDB::update"
-include_recipe "MongoDB::install"
-include_recipe "MongoDB::MongoDB"
-
+Cookbook default recipe includes commands to 
+importkey
+createfile
+update package list
+install, enable and starts MongoDB
 
 
 LICENSE and AUTHOR:
