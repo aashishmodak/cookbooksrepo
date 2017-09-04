@@ -6,12 +6,12 @@ Build Status Cookbook Version
 It installs and configures LAMP Stack. 
 
 Requirements
-Install LAMP Stack 
 
 Platforms
+
 Ubuntu 14.04
 
-Chef version used
+
 chef-client version: 13.2.20
 delivery version: master (73ebb72a6c42b3d2ff5370c476be800fee7e5427)
 berks version: 6.3.0
@@ -33,6 +33,13 @@ platform specific locations and settings.
 source installation settings
 Resources
 
+This cookbook includes resources for managing:
+
+PEAR channels
+PEAR/PECL packages
+php_pear_channel
+
+PEAR Channels are alternative sources for PEAR packages. This resource provides and easy way to manage these channels.
 
 Actions
 Installs Apache2

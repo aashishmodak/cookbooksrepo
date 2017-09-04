@@ -3,11 +3,17 @@
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
-execute "update-upgrade" do
-  command "apt-get update && apt-get upgrade -y"
-  action :run
+#execute "update-upgrade" do
+#  command "apt-get update && apt-get upgrade -y"
+#  action :run
+#end
+
+apt_update 'daily' do
+  frequency 86_400
+  action :periodic
 end
 
 include_recipe 'LAMPStack_Install::apache'
+include_recipe 'LAMPStack_Install::databagk'
 include_recipe 'LAMPStack_Install::mysql'
 include_recipe 'LAMPStack_Install::php'
