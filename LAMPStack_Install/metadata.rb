@@ -4,7 +4,7 @@ maintainer_email 'rajeshwari.makond@reancloud.com'
 license 'All Rights Reserved'
 description 'Installs/Configures LAMStack_Install'
 long_description 'Installs/Configures LAMStack_Install'
-version '0.1.1'
+version '1.1.1'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
 # The `issues_url` points to the location where issues for this cookbook are

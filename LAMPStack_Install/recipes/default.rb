@@ -14,6 +14,5 @@ apt_update 'daily' do
 end
 
 include_recipe 'LAMPStack_Install::apache'
-include_recipe 'LAMPStack_Install::databagk'
 include_recipe 'LAMPStack_Install::mysql'
 include_recipe 'LAMPStack_Install::php'
