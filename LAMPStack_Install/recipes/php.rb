@@ -1,19 +1,8 @@
-package "php5" do
-  action :install
+['php5','php-pear','php5-cgi','php5-dev'].each do |p|
+  package p do
+    action :install
+  end
 end
-
-package "php-pear" do
-  action :install
-end
-
-package "php5-cgi" do
-  action :install
-end
-
-package "php5-dev" do
-  action :install
-end
-
 
 cookbook_file "/etc/php5/apache2/php.ini" do
   source "php.ini"
