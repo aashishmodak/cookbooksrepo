@@ -1,12 +1,7 @@
 # Cookbook:: LAMStack_Install
 # Recipe:: default
-#
-# Copyright:: 2017, The Authors, All Rights Reserved.
-#execute "update-upgrade" do
-#  command "apt-get update && apt-get upgrade -y"
-#  action :run
-#end
 
+# Copyright:: 2017, The Authors, All Rights Reserved.
 apt_update 'daily' do
   frequency 86_400
   action :periodic
