@@ -1,4 +1,3 @@
-#
 # Cookbook:: LAMStack_Install
 # Recipe:: default
 #
