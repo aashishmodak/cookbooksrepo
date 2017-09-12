@@ -1,5 +1,5 @@
 name 'HashicorpConsul'
-maintainer 'Rajeshwari Makonr'
+maintainer 'Rajeshwari Makond'
 maintainer_email 'rajeshwari.makond@reancloud.com'
 license 'All Rights Reserved'
 description 'Installs/Configures HashicorpConsul'
