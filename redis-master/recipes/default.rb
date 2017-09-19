@@ -1,5 +1,5 @@
 #
-# Cookbook:: redis_master
+# Cookbook:: redis-master
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
