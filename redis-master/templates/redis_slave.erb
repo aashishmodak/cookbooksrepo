@@ -248,7 +248,7 @@ dir /var/lib/redis
 
 ################################# REPLICATION #################################
 
-slaveof <%= node['redis-master']['slave-ip']%>
+slaveof <%= node['redis-master']['master-ip']%> 6379 
 # another Redis server. A few things to understand ASAP about Redis replication.
 #
 # 1) Redis replication is asynchronous, but you can configure a master to
@@ -262,14 +262,15 @@ slaveof <%= node['redis-master']['slave-ip']%>
 #    network partition slaves automatically try to reconnect to masters
 #    and resynchronize with them.
 #
-slaveof <%= node['redis-master']['slave-ip']%>
+slaveof <%= node['redis-master']['master-ip']%> 6379
 
-requirepass <%= node['redis-master']['pwdslave-value']%>
+
+
 # directive below) it is possible to tell the slave to authenticate before
 # starting the replication synchronization process, otherwise the master will
 # refuse the slave request.
 #
-masterauth <%= node['redis-master']['auth-value']%>
+masterauth <%= node['redis-master']['mpsa-value'] %>
 # When a slave loses its connection with the master, or when the replication
 # is still in progress, the slave can act in two different ways:
 #
@@ -476,8 +477,7 @@ slave-priority 100
 # 150k passwords per second against a good box. This means that you should
 # use a very strong password otherwise it will be very easy to break.
 #
-requirepass <%= node['redis-master']['pwdslave-value']%>
-
+requirepass <%= node['redis-master']['slavepwd-value'] %> 
 # Command renaming.
 #
 # It is possible to change the name of dangerous commands in a shared

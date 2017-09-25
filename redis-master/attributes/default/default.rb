@@ -1,8 +1,7 @@
 default['redis-master']['tcp-value'] = "60"
-default['redis-master']['pwd-value'] = "Th!sisredis@10"
+default['redis-master']['mpsa-value'] = Chef::EncryptedDataBagItem.load('Redis', 'redis', 'redis')['password']
 default['redis-master']['mm-value'] = "noeviction"
 default['redis-master']['app-value'] = "yes"
 default['redis-master']['file-value'] = "redis-staging-ao.aof"
-default['redis-master']['pwdslave-value'] = "Th!sisredis-slave@10"
-default['redis-master']['slave-ip'] = "172.31.17.52 6379"
-default['redis-master']['auth-value'] = "Th!sisredis@10"
+default['redis-master']['master-ip'] = "" 
+default['redis-master']['slavepwd-value'] = Chef::EncryptedDataBagItem.load('Redis', 'redis', 'redis')['passwordslave']

@@ -1,3 +1,6 @@
+
+password = Chef::EncryptedDataBagItem.load('Redis', 'redis', 'redis')['password']
+puts password 
 apt_repository 'redis-server' do
   uri 'ppa:chris-lea/redis-server'
 end
@@ -14,7 +17,7 @@ template '/etc/redis/redis.conf' do
   notifies :restart, 'service[redis-server]', :delayed
 end
 
-service 'redis-server' do
-  supports :restart => true
-  action :nothing
+service "redis-server" do
+  supports :status => true, :restart => true, :start => true
+  action [ :start ]
 end
