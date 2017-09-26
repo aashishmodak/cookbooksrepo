@@ -1,9 +1,3 @@
-passwordslave = Chef::EncryptedDataBagItem.load('Redis', 'redis', 'redis')['passwordslave']
-puts passwordslave
-
-password = Chef::EncryptedDataBagItem.load('Redis', 'redis', 'redis')['password']
-puts password
-
 apt_repository 'redis-server' do
   uri 'ppa:chris-lea/redis-server'
 end
