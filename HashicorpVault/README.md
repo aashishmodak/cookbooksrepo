@@ -1,38 +1,24 @@
-HashicorpVault Cookbook
-=======================
-Installs Hashicorp vault from package OR source code to CentOS 7      
+# HashicorpVault
+Hashicorp Vault Cookbook
 
-Requirements
-------------
-Installs Hashicorp vault on CentOS 7      
+Installs Hashicorp Vault on Ubuntu 14.04
 
-Attributes
-----------
+REQUIREMENTS: Enable Hashicorp Vault in dev mode.
 
-node['HashicorpVault']['user'] = root
-node['HashicorpVault']['group] = root
-node['HashicorpVault']['sendfile'] = vault
-default['HashicorpVault']['dir'] = "/usr/bin"
-node.default['HashicorpVault']['dir'] = "/usr/bin"
+Platform Ubuntu 14.04
 
+This Cookbook requires chef-client version: 13.2.20 delivery version: master (73ebb72a6c42b3d2ff5370c476be800fee7e5427) berks version: 6.3.0 kitchen version: 1.17.0 inspec version: 1.33.1
 
+Recipes HashicorpVault::default
 
+Just include HashicorpVault default recipe in your node's run_list:
 
-Recipes
-HashicorpVault::default
- 
-Just include `HashicorpVault` in your node's `run_list`:
+{ "name":"my_node", "run_list": [ "recipe[HashicorpVault]" ] } 
 
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[HashicorpVault]"
-  ]
-}
-```
+Default recipe runs two commands
+vault server -dev    and
+export VAULT_ADDR='http://127.0.0.1:8200'
 
 License and Authors
--------------------
-Authors: Rajeshwari
-Here I used Open Source.
+Authors: Rajeshwari 
+License: No need of license to enable vault in dev mode. 
